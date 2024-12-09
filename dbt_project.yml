@@ -1,0 +1,28 @@
+name: 'my_dbt_project'
+version: '1.0'
+profile: 'my_project'  # Match this with your profiles.yml entry
+config-version: 2
+
+# Define where your models are stored
+model-paths: ["models"]
+
+models:
+  my_project:
+    schema: 
+
+# Optional: Specify where seeds and tests are stored
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+
+# Set the target database schema for models
+target-path: "devdw"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Optional: Add dependencies
+packages:
+  - package: dbt-labs/dbt_utils
+    version: [">=0.8.0", "<0.9.0"]
+
+

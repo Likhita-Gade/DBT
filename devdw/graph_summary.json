@@ -1,0 +1,1 @@
+{"_invocation_id": "8dfbb4a6-f0e4-439c-95fb-d3b379deee17", "linked": {"0": {"name": "model.my_dbt_project.products", "type": "model"}, "1": {"name": "model.my_dbt_project.productlines", "type": "model"}}}

@@ -1,0 +1,19 @@
+my_project:
+  target: dev
+  outputs:
+    dev:
+      type: redshift
+      host: 
+      user: 
+      password: 
+      port: 5439
+      dbname: dev
+      schema: devstage
+    prod:
+      type: redshift
+      host: default-workgroup.484907484188.eu-north-1.redshift-serverless.amazonaws.com
+      user: likhita
+      password: Hotstar99
+      port: 5439 
+
+
