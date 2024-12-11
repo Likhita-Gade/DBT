@@ -1,28 +1,33 @@
 {
     "path_count": 169,
-    "parsed_path_count": 1,
-    "static_analysis_path_count": 0,
+    "parsed_path_count": 2,
+    "static_analysis_path_count": 1,
     "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.015599449980072677,
-    "load_macros_elapsed": 0.000695252965670079,
-    "parse_project_elapsed": 0.15331425901968032,
-    "patch_sources_elapsed": 4.438974428921938e-06,
-    "process_manifest_elapsed": 0.001577862014528364,
-    "load_all_elapsed": 0.30957188800675794,
+    "read_files_elapsed": 0.014991349016781896,
+    "load_macros_elapsed": 0.0004484080127440393,
+    "parse_project_elapsed": 0.37618444999679923,
+    "patch_sources_elapsed": 1.0493968147784472e-05,
+    "process_manifest_elapsed": 0.0010545770055614412,
+    "load_all_elapsed": 0.4180988000007346,
     "projects": [
         {
             "project_name": "my_dbt_project",
-            "elapsed": 0.15324329095892608,
+            "elapsed": 0.37606794998282567,
             "parsers": [
                 {
+                    "parser": "model",
+                    "elapsed": 0.25892417901195586,
+                    "parsed_path_count": 1
+                },
+                {
                     "parser": "test",
-                    "elapsed": 0.15323769202223048,
+                    "elapsed": 0.11712675797753036,
                     "parsed_path_count": 1
                 }
             ],
-            "parsed_path_count": 1
+            "parsed_path_count": 2
         },
         {
             "project_name": "dbt_redshift",
