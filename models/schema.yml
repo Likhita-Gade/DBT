@@ -1,0 +1,62 @@
+
+version: 2
+
+models:
+    - name: productlines
+      description: "A starter dbt model for productlines"
+      columns:
+          - name: dw_product_line_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    - name: products
+      description: "A starter dbt model for products"
+      columns:
+          - name: dw_product_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    - name: offices
+      description: "A starter dbt model for offices"
+      columns:
+          - name: dw_office_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    - name: employees
+      description: "A starter dbt model for offices"
+      columns:
+          - name: dw_employee_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    - name: customers
+      description: "A starter dbt model for customers"
+      columns:
+          - name: dw_customer_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    
+    - name: payments
+      description: "A starter dbt model for payments"
+      columns:
+          - name: dw_payment_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    
+    - name: orders
+      description: "A starter dbt model for orders"
+      columns:
+          - name: dw_order_id
+            description: "The primary key for this table"
+            tests:
+                - not_null
+    - name: orderdetails
+      description: "A starter dbt model for orderdetails"
+      columns:
+          - name: dw_orderdetail_id
+            description: "The primary key for this table"
+            tests:
+                - not_null

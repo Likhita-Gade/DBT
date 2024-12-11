@@ -9,7 +9,10 @@ WITH batch_data AS (
         etl_batch_no
     FROM etlmetadata.batch_control
 ),
-transformed_data AS (
+existing_data as (
+    select max(dw_product_line_id) as max_product_line_id 
+    from {{this}}
+)
     SELECT
         s.productLine,
         s.create_timestamp as src_create_timestamp,
@@ -18,18 +21,6 @@ transformed_data AS (
         CURRENT_TIMESTAMP AS dw_update_timestamp,
         b.etl_batch_no,
         b.etl_batch_date,
-        ROW_NUMBER() OVER (ORDER BY productLine) AS dw_product_line_id
-    FROM devstage.productlines s CROSS JOIN batch_data b
-)
-
-SELECT
-    dw_product_line_id,
-    productLine,
-    src_create_timestamp,
-    src_update_timestamp,
-    dw_create_timestamp,
-    dw_update_timestamp,
-    etl_batch_no,
-    etl_batch_date
-FROM transformed_data
+        row_number() over() + coalesce(ed.max_product_line_id,0) AS dw_product_line_id
+    FROM devstage.productlines s CROSS JOIN batch_data b cross join existing_data ed
 
